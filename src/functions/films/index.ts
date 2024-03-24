@@ -7,7 +7,13 @@ export const getFilmByid = {
     {
       http: {
         method: 'get',
-        path: 'films/{id}'
+        path: 'films/{id}',
+        responses:{
+          200:{
+            description:'success',
+            bodyType:'postFilme',
+          }
+        }
       },
     }
   ],
@@ -19,11 +25,12 @@ export const postFilm = {
       http: {
         method: 'post',
         path: 'films/',
+        bodyType:'postFilme',
         request:{
           schemas:{
             'application/json': schema,
           }
-        }
+        },
       },
     }
   ],
@@ -35,6 +42,7 @@ export const putFilm = {
       http: {
         method: 'put',
         path: 'films/',
+        bodyType:'postFilme',
         request:{
           schemas:{
             'application/json': schema,
@@ -51,6 +59,7 @@ export const deleteFilm = {
       http: {
         method: 'delete',
         path: 'films/',
+        bodyType:'deleteFilme',
         request:{
           schemas:{
             'application/json': schema,

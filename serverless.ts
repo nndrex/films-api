@@ -5,7 +5,7 @@ import {getFilmByid,postFilm,putFilm,deleteFilm} from '@functions/films';
 const serverlessConfiguration: AWS = {
   service: 'starships-api',
   frameworkVersion: '3',
-  plugins: ['serverless-esbuild', 'serverless-offline'],
+  plugins: ['serverless-esbuild', 'serverless-offline','serverless-auto-swagger'],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
