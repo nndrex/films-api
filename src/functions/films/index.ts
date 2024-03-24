@@ -1,4 +1,5 @@
 import { handlerPath } from '@libs/handler-resolver';
+import {schema} from './schema'
 
 export const getFilmByid = {
   handler: `${handlerPath(__dirname)}/handler.getfilmbyId`,
@@ -6,12 +7,7 @@ export const getFilmByid = {
     {
       http: {
         method: 'get',
-        path: 'films/{id}',
-        // request: {
-        //   schemas: {
-        //     'application/json': schema,
-        //   },
-        // },
+        path: 'films/{id}'
       },
     }
   ],
@@ -23,11 +19,11 @@ export const postFilm = {
       http: {
         method: 'post',
         path: 'films/',
-        // request: {
-        //   schemas: {
-        //     'application/json': schema,
-        //   },
-        // },
+        request:{
+          schemas:{
+            'application/json': schema,
+          }
+        }
       },
     }
   ],
@@ -39,27 +35,27 @@ export const putFilm = {
       http: {
         method: 'put',
         path: 'films/',
-        // request: {
-        //   schemas: {
-        //     'application/json': schema,
-        //   },
-        // },
+        request:{
+          schemas:{
+            'application/json': schema,
+          }
+        }
       },
     }
   ],
 };
 export const deleteFilm = {
-  handler: `${handlerPath(__dirname)}/handler.deletetFilm`,
+  handler: `${handlerPath(__dirname)}/handler.deleteFilm`,
   events: [
     {
       http: {
         method: 'delete',
         path: 'films/',
-        // request: {
-        //   schemas: {
-        //     'application/json': schema,
-        //   },
-        // },
+        request:{
+          schemas:{
+            'application/json': schema,
+          }
+        }
       },
     }
   ],
