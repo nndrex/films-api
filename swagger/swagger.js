@@ -31,6 +31,9 @@
             "schema": {
               "$ref": "#/definitions/postFilme"
             }
+          },
+          "default": {
+            "description": "default response"
           }
         }
       }

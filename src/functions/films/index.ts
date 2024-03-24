@@ -9,6 +9,7 @@ export const getFilmByid = {
         method: 'get',
         path: 'films/{id}',
         responses:{
+          default:{},
           200:{
             description:'success',
             bodyType:'postFilme',
